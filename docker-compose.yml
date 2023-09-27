@@ -1,0 +1,18 @@
+version: "3.0"
+
+services:
+  jenkins:
+    container_name: jk_pratica
+
+    image: jk_pratica:0.1
+
+    build:
+      context: .
+
+      dockerfile: dockerfile
+
+    ports:
+      - "9090:9090"
+
+    networks:
+      - net
